@@ -1,0 +1,152 @@
+/*
+Theme Name: Twenty Fifteen
+Description: Used to style the TinyMCE editor.
+*/
+
+
+/**
+ * Table of Contents:
+ *
+ * 1.0 - Body
+ * 2.0 - Typography
+ * 3.0 - Elements
+ * 4.0 - Caption
+ * 5.0 - Galleries
+ * 6.0 - Audio / Video
+ * 7.0 - Media Queries
+ */
+
+
+/**
+ * 1.0 Body
+ */
+
+body {
+	color: #555;
+	font-family: Lato, sans-serif;
+}
+
+
+/**
+ * 2.0 Typography
+ */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: "Playfair Display", Georgia, serif;
+    color: #909090;
+}
+
+a, a:visited,
+a, a:active,
+a.active,
+table a {
+    color: #8fc339;
+    transition: color .5s linear;
+}
+
+a:hover,
+a:focus {
+    color: #425a1a;
+    transition: color .5s linear;
+}
+
+dfn,
+cite,
+em,
+i {
+	font-style: italic;
+}
+
+blockquote {
+	border-left: 4px solid #0e4224;
+}
+
+blockquote cite,
+blockquote small {
+	color: #333;
+	font-family: Lato, sans-serif;
+}
+
+code,
+kbd,
+tt,
+var,
+samp,
+pre {
+	font-family: monospace;
+}
+
+
+/**
+ * 3.0 Elements
+ */
+
+table,
+th,
+td,
+.mce-item-table,
+.mce-item-table th,
+.mce-item-table td {
+	border: 1px solid #e0efc8;
+}
+
+table th,
+.mce-item-table th,
+table caption {
+	font-family: "Playfair Display", serif;
+}
+
+table td,
+.mce-item-table td {
+	font-family: "Playfair Display", serif;
+}
+
+
+/**
+ * 5.0 Caption
+ */
+
+.wp-caption {
+	color: #555;
+	font-family: Lato, sans-serif;
+}
+
+
+/**
+ * 6.0 Galleries
+ */
+
+.gallery .gallery-caption {
+	color: #909090;
+	font-family: Lato, sans-serif;
+}
+
+/**
+ * 7.0 Audio / Video
+ */
+
+
+/**
+ * 8.0 RTL
+ */
+
+body.rtl {
+	font-family: Arial, Tahoma, sans-serif;
+}
+
+.rtl blockquote {
+	border-right: 4px solid #0e4224;
+}
+
+/**
+ * 9.0 Media Queries
+ */
+
+@media screen and (max-width: 740px) {
+	
+}

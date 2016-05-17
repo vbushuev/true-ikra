@@ -1,0 +1,412 @@
+/* Pink Amber color scheme */
+
+/* GENERAL */
+
+html,
+body:before {
+    background: transparent;
+}
+
+body {
+    background-color: #fde7ee;
+}
+
+a, a:visited,
+a, a:active,
+a.active {
+    color: #e91e63;
+}
+
+a:hover,
+a:focus {
+    color: #c2185b;
+}
+
+/* Elements */
+blockquote {
+    border-left-color: #c2185b;
+}
+
+.entry-content a, 
+.entry-summary a, 
+.page-content a, 
+.comment-content a, 
+.pingback .comment-body > a {
+    border-bottom: 1px solid #e91e63;
+}
+
+table, th, td {
+    border-color: #f8bbd0;
+}
+
+button, input, select, textarea {
+    background-color: #fde7ee;
+}
+
+
+/**
+* GENERAL TYPOGRAPHY
+*/
+
+/* HEADER */
+.site-header {
+    background-color: transparent;
+    border-bottom: 1px dotted #f8bbd0;
+}
+
+.site-title a {
+    color: #ffc107;
+}
+
+.site-description {
+    border: 4px dotted #e91e63;
+    color: #e91e63;
+}
+
+.secondary-toggle {
+    background-color: #e91e63;
+    color: #f8bbd0;
+}
+
+.secondary-toggle:before {
+    color: #f8bbd0;
+}
+
+.secondary-toggle:hover:before,
+.secondary-toggle:focus:before {
+    background-color: #c2185b;
+    color: #fff;
+}
+
+/* FOOTER */
+.site-footer {
+    background-color: #260410;
+    color: #fff;
+}
+
+.site-footer a {
+    color: #f8bbd0;
+}
+
+.site-footer a:hover,
+.site-footer a:focus {
+    color: #fff;
+}
+
+.footer-credits {
+    color: #fff;
+}
+
+.footer-credits h2 {
+    color: #c2185b;
+    border-bottom: 1px dotted #fff;
+}
+
+/* Sidebar */
+.sidebar {
+    background: transparent;
+}
+
+/* Social menu */
+.social-navigation a {
+    color: #e91e63;
+}
+
+.social-navigation a:hover,
+.social-navigation a:focus {
+    color: #c2185b;
+}
+
+/* Light border below widget lists */
+.widget_archive li, 
+.widget_categories li, 
+.widget_links li, 
+.widget_meta li, 
+.widget_nav_menu li, 
+.widget_pages li, 
+.widget_recent_comments li, 
+.widget_recent_entries li {
+    border-top: 1px solid #f8bbd0;
+}
+
+/* Media queries sidebar */
+/**
+ * 16.2 Desktop Small 955px
+ */
+
+@media screen and (min-width: 59.6875em) {
+    .sidebar {
+        background: #ecf0f1 url(../imgs/pink-amber-sidebarbg.png) 0 0 repeat;
+    }
+}
+
+/* POSTS */
+.hentry {
+   background-color: rgba(255, 255, 255, .8); 
+}
+
+.entry-header {
+    background: #3f51b5 url(../imgs/pink-amber-pattern.png);
+}
+
+.entry-header .entry-title,
+.entry-header .entry-title a {
+    color: #fff;
+}
+
+.entry-footer {
+    background-color: #fde7ee;
+}
+
+.posted-on a,
+.byline a,
+.cat-links a,
+.tags-links a,
+.edit-link a {
+    color: #e91e63;
+}
+
+.posted-on a:hover,
+.posted-on a:focus,
+.byline a:hover,
+.byline a:focus,
+.cat-links a:hover,
+.cat-links a:focus,
+.tags-links a:hover,
+.tags-links a:focus,
+.edit-link a:hover,
+.edit-link a:focus {
+    color: #c2185b;
+}
+
+.more-link,
+.search .more-link {
+    background-color: #e91e63;
+    color: #fff;
+}
+
+.more-link:hover,
+.more-link:focus,
+.search .more-link:hover,
+.search .more-link:focus {
+    background-color: #c2185b;
+    color: #fff;
+}
+
+.sticky-post {
+    background-color: #ffc107;
+    color: #fff;
+}
+
+/* Gallery */
+
+/* image caption at the top of the lightbox */
+#cboxTitle {
+    background-color: #ffc107;
+    color: #fff;
+}
+
+/* PAGES */
+
+.page .entry-content:before {
+    background: url(../imgs/pink-amber-flourish.png) center 0 no-repeat;
+}
+
+.not-found .page-header,
+.search .page-header,
+.search-results .page-header,
+.archive .page-header {
+    border-left-color: #e91e63;
+}
+
+/* Comments */
+
+.comments-area .comment-list .reply a {
+    background-color: #e91e63;
+    color: #fff;
+}
+
+.comments-area .comment-list .reply a:hover,
+.comments-area .comment-list .reply a:focus {
+    background-color: #c2185b;
+}
+
+.comments-area .form-submit input[type="submit"] {
+    background-color: #ffc107;
+    color: #727272;
+}
+
+.comments-area .form-submit input[type="submit"]:hover {
+    background-color: #c29200; 
+    color: #fff;
+}
+
+/* Home */
+
+/* Latest Home page posts section */
+
+.latest-homepage-posts .more-link {
+    color: #fff;
+}
+
+
+/* PLUGINS */
+
+/* Food and Drink Menu Plugin */
+
+/* Home page menu */
+
+/* Specials menu section in home page */
+
+.home-menu .widget-title {
+    background: #3f51b5 url(../imgs/pink-amber-pattern.png);
+    color: #fff;
+}
+
+.home-menu .fdm-item-image:hover,
+.home-menu .fdm-item-image:focus {
+    border: 4px dotted #e91e63;
+}
+
+.home-menu .fdm-section-header {
+    border-bottom: 2px dotted #e91e63;
+}
+
+.home-menu .fdm-item-price-wrapper {
+    background-color: #ffc107; 
+    color: #fff;
+}
+
+/* Action button at the bottom of the Specials menu and Testimonials sections */
+.page-template-restauranthome-template .homepage-section .btn-wrapper {
+    border: 4px dotted #e91e63;
+}
+
+.page-template-restauranthome-template .homepage-section .action-btn {
+    background-color: #ffc107;
+    color: #727272;
+}
+
+.page-template-restauranthome-template .homepage-section .action-btn:hover,
+.page-template-restauranthome-template .homepage-section .action-btn:focus {
+    background-color: #c29200;
+    color: #fff;
+}
+
+/* Food menu in the Menu page */
+.fdm-columns-1 .fdm-section-header {
+    border-bottom: 2px dotted #e91e63;
+}
+
+.fdm-columns-1 img:hover,
+.fdm-columns-1 img:focus {
+    border: 4px dotted #e91e63;
+}
+
+/* Menu item advertised in the sidebar widget */
+.secondary .widget_fdm_widget_menu_item .widget-title {
+    background-color: #ffc107;
+    color: #727272;
+}
+
+/* Testimonials plugin */
+
+.page-template-restauranthome-template .testimonials .widget-title {
+    color: #e91e63;
+}
+
+.page-template-restauranthome-template .testimonials .image img {
+    border: 2px solid #e91e63;
+}
+
+.page-template-restauranthome-template .testimonials blockquote {
+    border-left-color: #c2185b;
+}
+
+/* Reservations plugin */
+
+.rtb-booking-form button[type="submit"],
+.rtb-booking-form button {
+    background-color: #ffc107;
+    color: #727272;
+}
+
+.rtb-booking-form button[type="submit"]:hover,
+.rtb-booking-form button[type="submit"]:focus,
+.rtb-booking-form button:hover,
+.rtb-booking-form button:focus {
+    background-color: #c29200;
+    color: #fff;
+}
+
+/* Team Members Plugin */
+.tmm_member {
+    border-top-color: #c2185b !important;
+}
+
+.tmm_member .tmm_photo {
+    border: 2px solid #c2185b;
+}
+
+
+/* END PLUGINS STYLES */
+
+/* NAVIGATIONS */
+
+/* Main navigation */
+.main-navigation {
+    background-color: #260410; 
+    border-bottom: 2px dotted #f8bbd0;
+    border-top: 2px dotted #f8bbd0;
+}
+
+.main-navigation li {
+    border-top: 2px dotted #f8bbd0;
+}
+
+.main-navigation a {
+    color: #f8bbd0;
+}
+
+.main-navigation a:hover li,
+.main-navigation a:focus li,
+.main-navigation a:hover,
+.main-navigation a:focus {
+    background-color: #c2185b;
+    color: #fff;
+}
+
+.main-navigation .current-menu-item > a, 
+.main-navigation .current-menu-ancestor > a {
+    color: #fff;
+}
+
+.main-navigation .dropdown-toggle:after {
+    color: #f8bbd0; 
+}
+
+/* Posts navigation */
+.navigation .nav-links .next,
+.navigation .nav-links .prev {
+    background-color: #e91e63;
+}
+
+.navigation .nav-links .next:hover,
+.navigation .nav-links .next:focus,
+.navigation .nav-links .prev:hover,
+.navigation .nav-links .prev:focus {
+    background-color: #c2185b;
+}
+
+/* Paginated post links */
+.page-links a {
+    background-color: #e91e63;
+    border-color: #e91e63;
+    color: #fff;
+}
+
+.page-links a:hover,
+.page-links a:focus {
+    background-color: #c2185b;
+    border-color: #c2185b;
+}

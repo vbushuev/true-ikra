@@ -1,0 +1,1110 @@
+/*
+Theme Name:     Pizzaland
+Version:        1.0.8
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Theme URI:      http://wpthememakeover.com/pizzaland-a-child-theme-of-twenty-fifteen-for-restaurants
+Description:    Pizzaland is a child theme of the Twenty Fifteen default WordPress theme.  This ensures that it's got a solid basis on which it's built.  It's specifically designed for restaurants and cafes: it supports the Food and Drink Menu Plugin (https://wordpress.org/plugins/food-and-drink-menu/), the Restaurant Reservations Plugin (https://wordpress.org/plugins/restaurant-reservations/), the Testimonials Widget plugin (https://wordpress.org/plugins/testimonials-widget/), and the Team Members Plugin (https://wordpress.org/plugins/team-members/).  The user interface elements provided by these plugins have been thoughtfully styled and a custom Restaurant Home page purposefully crafted.  However, Pizzaland can be used as an elegant blogging theme without installing any of the recommended plugins.
+Author:         Maria Antonietta Perna
+Author URI:     http://wpthememakeover.com
+Text Domain:    pizzaland
+Template:       twentyfifteen
+Template Version:   1.3
+Tags:           two-columns, left-sidebar, responsive-layout, fixed-layout, custom-menu, custom-background, custom-header, editor-style, featured-images, sticky-post, post-formats, theme-options, threaded-comments, translation-ready, light
+*/
+
+/* GENERAL */
+
+html,
+body:before {
+    background: transparent;
+}
+
+body {
+    background-color: #e8f3d5;
+    color: #555;
+    font-family: Lato, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body.custom-background {
+    background-size: cover;
+}
+
+a {
+   transition: color .5s linear; 
+}
+
+a, a:visited,
+a, a:active,
+a.active {
+    color: #8fc339;
+}
+
+a:hover,
+a:focus {
+    color: #186b3b;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    text-transform: uppercase;
+}
+
+/* Elements */
+blockquote {
+    border-left-color: #425a1a;
+}
+
+.entry-content a, 
+.entry-summary a, 
+.page-content a, 
+.comment-content a, 
+.pingback .comment-body > a {
+    border-bottom: 1px solid #8fc339;
+}
+
+table, th, td {
+    border-color: #cae4a0;
+}
+
+button, input, select, textarea {
+    background-color: #e0efc8;
+}
+
+
+/**
+* GENERAL TYPOGRAPHY
+*/
+
+/* Replace twenty fifteen font family on all elements for regular text */
+p,
+a,
+button,
+input,
+select,
+textarea,
+blockquote cite,
+blockquote small,
+code,
+kbd,
+tt,
+var,
+samp,
+pre,
+input[type="button"],
+input[type="reset"],
+input[type="submit"],
+input[type="search"],
+.post-password-form label,
+.site-description,
+.main-navigation .menu-item-description, 
+.post-navigation .meta-nav, 
+.post-navigation .post-title, 
+.pagination, 
+.image-navigation,
+.comment-navigation, 
+.widget,
+.widget_calendar caption, 
+.widget_rss .rss-date,
+.widget_rss cite,
+.author-heading,
+.entry-footer,
+.entry-footer a,
+.page-links, 
+.entry-caption, 
+.comment-metadata,
+.pingback .edit-link, 
+.comment-list .reply a, 
+.comment-form label, 
+.comment-notes,
+.comment-awaiting-moderation,
+.logged-in-as,
+.form-allowed-tags, 
+.no-comments, 
+.wp-caption-text, 
+.gallery-caption, 
+.widecolumn label,
+.widecolumn .mu_register label {
+	font-family: Lato, sans-serif;
+}
+
+::-webkit-input-placeholder     {
+    font-family: Lato, sans-serif;
+}
+
+:-moz-placeholder {
+    font-family: Lato, sans-serif;
+}
+
+::-moz-placeholder {
+    font-family: Lato, sans-serif;
+}
+
+-ms-input-placeholder {
+    font-family: Lato, sans-serif;
+}
+
+/* Replace twenty fifteen font family on all headings */
+h1, h2, h3, h4, h5, h6,
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a,
+.site-title,
+.site-title a, 
+.widget-title, 
+.page-title, 
+.comments-title,
+.comment-reply-title {
+    font-family: "Playfair Display", Georgia, serif;
+}
+
+/* Replace twenty fifteen font family for code */
+code,
+kbd,
+tt,
+var,
+samp,
+pre,
+.form-allowed-tags code {
+	font-family: monospace;
+}
+
+body,
+button,
+input,
+select,
+textarea {
+	color: #555;
+}
+
+h1, h2, h3, .site-title,
+.widget-title {
+    font-weight: 400;
+    color: #909090;
+}
+
+/* HEADER */
+.site-header {
+    background-color: transparent;
+    border-bottom: 1px dotted #d2e7ae;
+}
+
+.site-branding {
+    padding-bottom: 60px;
+    margin-bottom: 2em;
+}
+
+.site-title,
+.site-title a {
+    font-weight: 700;
+    font-style: italic;
+     text-align: center;
+}
+
+.site-title a {
+    color: #f22613;
+    font-size: 28px;
+    font-size: 2.8rem;
+    padding: .2em .5em 2em;
+    
+    text-shadow: 2px 1px 1px rgba(0,0,0,.8);
+}
+
+.site-description {
+    border: 4px dotted #8fc339;
+    color: #186b3b;
+    display: block;
+    font-style: italic; 
+    font-size: 20px;
+    font-size: 2.0rem;
+    font-weight: 700;
+    margin: 2em auto 0;
+    padding: 0 .5em .3em;
+    text-align: center;
+    opacity: 1;
+    
+    text-shadow: 2px 1px 1px rgba(0,0,0,.8);
+    transition: transform .5s linear;
+    
+}
+
+.tilt {
+   -webkit-transform: rotate(-10deg);
+    transform: rotate(-10deg); 
+}
+
+.secondary-toggle {
+    background-color: #0f4124;
+    color: #8ce5b2;
+}
+
+.secondary-toggle:before {
+    color: #8ce5b2;
+    transition: background-color .5s linear, color .5s linear;
+}
+
+.secondary-toggle:hover:before,
+.secondary-toggle:focus:before {
+    background-color: #186b3b;
+    color: #fff;
+}
+
+/* Media Queries for Header */
+
+/**
+ * Mobile Large 620px
+ */
+
+@media screen and (min-width: 38.75em) {
+    .site-header{
+        background: transparent;
+    }  
+    
+    .site-branding {
+        position: relative;
+        top: 0;
+    }
+    
+    .site-description {
+        margin-top: 3em;
+        max-width: 400px;
+    }
+    
+    .secondary-toggle {
+        top: 40%;
+    }
+}
+
+/**
+ * Desktop Small 955px
+ */
+
+@media screen and (min-width: 59.6875em) {
+    .site-header {
+        margin-bottom: 0;
+    }
+    
+    .site-description {
+        font-size: 20px;
+        font-size: 2.0rem;
+        margin-bottom: 0;
+    }
+}
+
+/**
+ * Desktop Medium 1100px
+ */
+@media screen and (min-width: 68.75em) {
+    .site-description {
+        font-size: 24px;
+        font-size: 2.4rem;
+    } 
+}
+
+/* FOOTER */
+.site-footer {
+    background-color: #05180d;
+    color: #fff;
+}
+
+.site-footer a {
+    color: #8ce5b2;
+}
+
+.site-footer a:hover,
+.site-footer a:focus {
+    color: #fff;
+}
+
+.footer-credits {
+    color: #fff;
+}
+
+.footer-credits.alignleft,
+.footer-credits.alignright {
+    display: block;
+    float: none;
+}
+
+.footer-credits h2 {
+    color: #1c884a;
+    font-size: 16px;
+    font-size: 1.6rem;
+    border-bottom: 1px dotted #fff;
+    margin-bottom: .5em;
+}
+
+.credits-link {
+    border-top: 1px dotted #444;
+    margin-top: 1em;
+    padding-bottom: 0;
+    padding-top: 2em;
+    text-align: center;
+}
+
+
+/* Media queries footer */
+/**
+ * Mobile Large 620px
+ */
+@media screen and (min-width: 38.75em) {
+    .footer-credits h2 {
+        font-size: 18px;
+        font-size: 1.8rem;
+    }
+    
+    .footer-credits.alignleft {
+        display: inline;
+        float: left; 
+    }
+    
+    .footer-credits.alignright {
+        display: inline;
+        float: right; 
+    }
+        
+}
+
+/* Sidebar */
+.sidebar {
+    background: transparent;
+}
+
+/* Social menu */
+.social-navigation a {
+    color: #1c884a;
+    
+    transition: color .5s linear;
+}
+
+.social-navigation a:hover,
+.social-navigation a:focus {
+    color: #186b3b;
+}
+
+/* Light border below widget lists */
+.widget_archive li, 
+.widget_categories li, 
+.widget_links li, 
+.widget_meta li, 
+.widget_nav_menu li, 
+.widget_pages li, 
+.widget_recent_comments li, 
+.widget_recent_entries li {
+    border-top: 1px solid #cae4a0;
+}
+
+/* Media queries sidebar */
+/**
+ * Desktop Small 955px
+ */
+
+@media screen and (min-width: 59.6875em) {
+    .sidebar {
+        background: #f6fbef url(imgs/sidebar-bg.png) 0 0 repeat;
+    }
+}
+
+/* POSTS */
+.hentry {
+    background-color: rgba(255, 255, 255, .8); 
+    box-shadow: -1px 4px 3px #958b8b;
+}
+
+.entry-header {
+    background: #2ecc71 url(imgs/pattern.png);
+    margin-top: 0;
+}
+
+.entry-header .entry-title,
+.format-gallery .entry-header .entry-title,
+.format-aside .entry header .entry-title,
+.format-image .entry-header .entry-title,
+.format-video .entry-header .entry-title,
+.format-quote .entry-header .entry-title,
+.format-link .entry-header .entry-title,
+.format-status .entry-header .entry-title,
+.format-audio .entry-header .entry-title,
+.format-chat .entry-header .entry-title {
+    font-size: 24px;
+    font-size: 2.4rem;
+}
+
+.entry-header .entry-title,
+.entry-header .entry-title a {
+    color: #fff;
+    padding-bottom: .5em;
+    padding-top: .5em;
+}
+    
+.post .post-thumbnail {
+    margin-bottom: 0;
+}
+
+.entry-footer {
+    background-color: #e8f3d5;
+}
+
+.posted-on a,
+.byline a,
+.cat-links a,
+.tags-links a,
+.edit-link a {
+    color: #8fc339;
+}
+
+.posted-on a:hover,
+.posted-on a:focus,
+.byline a:hover,
+.byline a:focus,
+.cat-links a:hover,
+.cat-links a:focus,
+.tags-links a:hover,
+.tags-links a:focus,
+.edit-link a:hover,
+.edit-link a:focus {
+    color: #186b3b;
+    text-decoration: none;
+    border: none;
+}
+
+.more-link,
+.search .more-link {
+    display: block;
+    font-size: 1.6rem;
+    background-color: #8fc339;
+    color: #fff;
+    border-radius: 1em;
+    padding: .5em .3em;
+    text-align: center;
+    text-shadow: 2px 1px 1px rgba(0,0,0,.8);
+    
+    transition: background-color .5s linear;
+}
+
+.more-link:hover,
+.more-link:focus,
+.search .more-link:hover,
+.search .more-link:focus {
+    background-color: #186b3b;
+    color: #fff;
+}
+
+.sticky-post {
+    background-color: #f22613;
+    color: #fff;
+    padding: 1em;
+    text-shadow: 2px 1px 1px rgba(0,0,0,.8);
+}
+
+/* Gallery */
+.gallery figure {
+    transition: box-shadow .5s linear;
+}
+
+.gallery figure:hover,
+.gallery figure:focus {
+    box-shadow: -1px 4px 3px #958b8b;
+}
+
+.gallery-item a,
+.gallery-item a:active,
+.gallery-item a:hover,
+.gallery-item a:focus,
+.gallery-item a:visited,
+.gallery-item a.active {
+    outline: none;
+}
+
+/* image caption at the top of the lightbox */
+#cboxTitle {
+    background-color: #f22613;
+    color: #fff;
+    padding: .5em;
+    top: 2em;
+    text-shadow: 2px 1px 1px rgba(0,0,0,.8);
+}
+
+/* content inside the lightbox */
+#cboxLoadedContent {
+    overflow: hidden;
+    max-width: 660px;
+}
+
+/* image inside the lightbox content div */
+#cboxLoadedContent img {
+    max-width: 100%;
+}
+
+
+/* PAGES */
+
+.page .entry-header {
+    display: none;
+}
+
+.page .entry-content {
+    margin: 0 auto;
+}
+
+.page .has-post-thumbnail .entry-content {
+    padding-top: 1.5em;
+}
+
+.page .entry-content:before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1.5em;
+    background: url(imgs/flourish.png) center 0 no-repeat;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.page .entry-content > p:first-child {
+    font-size: 22px;
+    font-size: 2.2rem;
+    font-weight: 300;
+    text-align: center
+}
+
+.not-found .page-header,
+.search .page-header,
+.search-results .page-header,
+.archive .page-header {
+    border-left-color: #8fc339;
+}
+
+/* Comments */
+.comments-area,
+.comments-area .comment-metadata,
+.comments-area .comment-list .reply,
+.comments-area .comment-list .reply a,
+.comments-area .form-allowed-tags,
+.comments-area .logged-in-as,
+.comments-area .form-submit,
+.comments-area .form-submit input[type="submit"],
+.comments-area .comment-form .comment-form-comment label,
+.comments-area .comment-form .comment-form-comment textarea {
+    font-family: Lato, sans-serif; 
+}
+
+.comments-area .comment-list .reply a {
+    background-color: #8fc339;
+    color: #fff;
+    border-radius: 1em;
+    text-shadow: 2px 1px 1px rgba(0,0,0,.8);
+    transition: background-color .5s linear;
+}
+
+.comments-area .comment-list .reply a:hover,
+.comments-area .comment-list .reply a:focus {
+    background-color: #186b3b;
+}
+
+.comments-area .form-submit input[type="submit"] {
+    background-color: #f22613; 
+    border-radius: 1em;
+    transition: background-color .5s linear, border-radius .5s ease-out;
+}
+
+.comments-area .form-submit input[type="submit"]:hover {
+    background-color: #870505; 
+    border-radius: 2em;
+}
+
+/* Home */
+
+/* Latest Home page posts section */
+.latest-posts {
+    padding: 2em 1em;
+}
+
+.latest-posts h2 {
+    font-size: 24px;
+    font-size: 2.4rem;
+    margin-bottom: 1em;
+    text-align: center;
+}
+
+.latest-homepage-posts {
+    text-align: center;
+}
+
+.latest-homepage-posts img {
+    transition: box-shadow .5s linear;
+}
+
+.latest-homepage-posts:hover img,
+.latest-homepage-posts:focus img{
+    box-shadow: -1px 4px 3px #958b8b;
+}
+
+.latest-homepage-posts h3 {
+    font-size: 18px;
+    font-size: 1.8rem;
+    margin: .5em auto;
+    line-height: 1.3;
+}
+
+.latest-homepage-posts p {
+    font-size: 16px;
+    font-size: 1.6rem;
+    line-height: 1.5;
+}
+
+
+.latest-homepage-posts .more-link {
+    color: #fff;
+    margin: 1em auto 0;
+    max-width: 80%;
+}
+
+
+/* PLUGINS */
+
+/* Food and Drink Menu Plugin */
+
+/* Home page menu */
+.page-template-restauranthome-template .homepage-section {
+    padding-bottom: 4em;
+}
+
+/* Specials menu section in home page */
+
+.home-menu {
+    margin-bottom: 1em;
+}
+
+.home-menu .fdm-item-panel {
+    text-align: center;
+}
+
+.home-menu .widget-title {
+    background: #2ecc71 url(imgs/pattern.png);
+    color: #fff;
+    font-size: 26px;
+    font-size: 2.6rem;
+    padding-bottom: .5em;
+    padding-top: .5em;
+    text-align: center;
+}
+
+.home-menu .fdm-item-content,
+.single-fdm-menu .fdm-item-content {
+    display: none;
+}
+
+/* Single page for menu items */
+.single-fdm-menu .fdm-item-price-wrapper {
+	position: relative;
+	float: right;
+}
+
+.home-menu .fdm-item-image {
+    width: 33%;
+    float: none;
+    
+    transition: transform .5s linear;
+}
+
+.home-menu .fdm-item-image:hover,
+.home-menu .fdm-item-image:focus {
+    border: 4px dotted #8fc339;
+    
+    -webkit-transform: rotate(-2deg) scale(.8,.8);
+    transform: rotate(-2deg) scale(.8,.8);
+}
+
+.home-menu .fdm-section-header {
+    border-bottom: 2px dotted #2ecc71;
+}
+
+.home-menu .fdm-section-header h3 {
+    margin-bottom: 1em;
+    font-size: 22px;
+    font-size: 2.2rem;
+    font-style: italic;
+    text-align: center;
+}
+
+.home-menu .fdm-item-panel p {
+    font-size: 16px;
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-top: 1em;
+}
+
+.home-menu .fdm-item-has-price .fdm-item-panel p {
+    padding-right: 0;
+}
+
+.home-menu .fdm-item-has-image .fdm-item-panel p {
+    padding-left: 0;
+}
+
+.home-menu .fdm-item-price-wrapper {
+    background-color: #f22613; 
+    color: #fff;
+    font-size: 18px;
+    font-size: 1.8rem;
+    font-weight: 700;
+    font-style: italic;
+    padding: 1em;
+    text-align: center;
+    text-shadow: 2px 2px 2px #870505;
+}
+
+/* Action button at the bottom of the Specials menu and Testimonials sections */
+.page-template-restauranthome-template .homepage-section .btn-wrapper {
+    border: 4px dotted #8fc339;
+    font-size: 22px;
+    font-size: 2.2rem;
+    width: 80%;
+    margin: 0 auto;
+    padding: 3em 2em;
+    text-align: center;
+}
+
+.page-template-restauranthome-template .homepage-section .action-btn {
+    background-color: #f22613;
+    border-radius: 1em;
+    color: #fff;
+    padding: 1em;
+    text-align: center;
+    white-space: nowrap;
+    
+    transition: background-color .5s linear, border-radius .5s ease-out;
+}
+
+.page-template-restauranthome-template .homepage-section .action-btn:hover,
+.page-template-restauranthome-template .homepage-section .action-btn:focus {
+    background-color: #870505;
+    border-radius: 2em;
+}
+
+/* Food menu in the Menu page */
+.fdm-columns-1 .fdm-section-header {
+    font-style: italic;
+    border-bottom: 2px dotted #2ecc71;
+}
+
+.fdm-columns-1 .fdm-item-title {
+    margin-bottom: 1em;
+    font-size: 18px;
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+.fdm-columns-1 img {
+    margin-right: 2em;
+    transition: transform .5s linear;
+}
+
+.fdm-columns-1 img:hover,
+.fdm-columns-1 img:focus {
+    border: 4px dotted #8fc339;
+   
+    -webkit-transform: rotate(-2deg) scale(.8,.8);
+    transform: rotate(-2deg) scale(.8,.8);
+}
+
+.fdm-columns-1 .fdm-item-content p {
+    font-size: 16px;
+    font-size: 1.6rem;
+    text-align: center;
+}
+
+.fdm-item-has-price .fdm-item-panel p {
+    padding-right: 0 !important;
+}
+
+/* Food and Menu items in search results */
+.search .fdm-menu,
+.search-results .fdm-menu,
+.archive .fdm-menu,
+.single-fdm-menu .fdm-menu,
+.single-fdm-menu .fdm-section {
+    margin-left: 8.333%;
+    margin-right: 8.333%;
+}
+
+.search .fdm-menu-item .post-thumbnail,
+.search-results .fdm-menu-item .post-thumbnail,
+.archive .fdm-menu-item .post-thumbnail,
+.single-fdm-menu-item .post-thumbnail {
+    margin-bottom: 0;
+}
+
+/* Menu item advertised in the sidebar widget */
+.secondary .widget_fdm_widget_menu_item .widget-title {
+    background-color: #f22613;
+    color: #fff;
+    padding: .5em;
+    text-align: center;
+}
+
+.secondary .widget_fdm_widget_menu_item .fdm-item-price-wrapper,
+.secondary .widget_fdm_widget_menu_item .fdm-item-content {
+    display: none;
+}
+
+.secondary .widget_fdm_widget_menu_item .fdm-item-panel img {
+    margin-right: 1em;
+}
+
+.secondary .widget_fdm_widget_menu_item .fdm-item-panel .fdm-item-title {
+    text-align: center;
+    font-style: italic;
+}
+
+/* Testimonials plugin */
+.page-template-restauranthome-template .testimonials,
+.search .testimonials-widget {
+    padding: 2em 3em;
+}
+
+.page-template-restauranthome-template .testimonials .widget-title {
+    color: #8fc339;
+    font-size: 18px;
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.page-template-restauranthome-template .testimonials .image img {
+    border: 2px solid #0e4224;
+    border-radius: 1em;
+    margin-bottom: 2em;
+}
+
+.page-template-restauranthome-template .testimonials .author {
+    font-weight: 700;
+}
+
+.page-template-restauranthome-template .testimonials blockquote {
+    border-left-color: #0e4224;
+}
+
+/* Reservations plugin */
+.rtb-booking-form {
+    width: 90%;
+    margin: 2em auto;
+}
+
+.rtb-booking-form form {
+    width: 100%;
+}
+
+.rtb-booking-form legend {
+    display: block;
+    width: 90%;
+    text-align: center;
+    font-weight: 700;
+    font-family: italic;
+    font-size: 20px;
+    font-size: 2.0rem;
+}
+
+.rtb-booking-form input[type="text"],
+.rtb-booking-form input[type="email"],
+.rtb-booking-form input[type="tel"] {
+    min-width: 100%;
+} 
+
+.rtb-booking-form input[type="tel"] {
+    padding: 0.5278em;
+}
+
+.rtb-booking-form button[type="submit"],
+.rtb-booking-form button {
+    background-color: #f22613;
+    color: #fff;
+    border-radius: 1em;
+    transition: background-color .5s linear, border-radius .5s ease-out;
+}
+
+.rtb-booking-form button[type="submit"]:hover,
+.rtb-booking-form button[type="submit"]:focus,
+.rtb-booking-form button:hover,
+.rtb-booking-form button:focus {
+    background-color: #870505;
+    border-radius: 2em;
+}
+
+/* Team Members Plugin */
+.tmm_member .tmm_photo {
+    background-position: center center !important;
+    border: 2px solid #0e4224;
+    border-radius: 1em !important;
+    box-shadow: none;
+}
+
+/* Footer widget area */
+.footer-widget-wrapper {
+	padding-bottom: 0;
+	margin-bottom: 0;
+}
+
+.footer-widget-wrapper .widget {
+	margin-bottom: 0;
+}
+
+/* If you use Google Maps Builder plugin in footer area 
+ your Google Maps are styled from here. In the builder set 
+width to 100% and height to 200px.
+*/
+.gmb-maps-widget,
+.google-maps-builder-wrap,
+.gmb-maps-builder {
+	min-width: 100%;
+}
+
+.gmb-maps-widget {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+
+
+/* END PLUGINS STYLES */
+
+
+/* Media queries for Homepage section */
+
+/**
+ * Mobile Large 620px
+ */
+@media screen and (min-width: 38.75em) {
+    .home-menu .fdm-item-image {
+        width: 43%;
+    }
+}
+
+/**
+ * Tablet Small 740px
+ */
+
+@media screen and (min-width: 46.25em) {    
+    /* Make more link in latest posts homepage section full width */
+    .latest-homepage-posts .more-link {
+        width: 100%;   
+    }
+}
+
+/**
+ * Tablet Large 880px
+ */
+
+@media screen and (min-width: 55em) {
+    .home-menu .fdm-item-image {
+        width: 53%;
+    }
+    
+    /* Lay out the 3 latest posts in homepage horizontally */
+    .latest-homepage-posts {
+        float: left;
+        max-width: 33%;
+        padding: 0 1em;
+    }
+    
+    .latest-homepage-posts.medium-thumbs {
+        float: left;
+        max-width: 50%;
+        padding: 0 1em;
+    }
+    
+}
+
+/**
+ * Desktop Small 955px
+ */
+
+@media screen and (min-width: 59.6875em) {
+    .home-menu .fdm-item-image {
+        width: 100%;
+    }
+    
+    .home-menu .fdm-item-price-wrapper {
+        padding-right: 2.5em;
+    }
+}
+
+
+/* NAVIGATIONS */
+
+/* Main navigation */
+.main-navigation {
+    background-color: #05180d; 
+    border-bottom: 2px dotted #8ce5b2;
+    border-top: 2px dotted #8ce5b2;
+    color: #fff;
+    font-family: Lato, sans-serif;
+    font-size: 18px;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+}
+
+.main-navigation li {
+    border-top: 2px dotted #8ce5b2;
+    display: block;
+}
+
+.main-navigation a {
+    color: #8ce5b2;
+    display: block;
+    padding-left: .5em;
+    padding-right: .5em;
+}
+
+.main-navigation a:hover li,
+.main-navigation a:focus li,
+.main-navigation a:hover,
+.main-navigation a:focus {
+    background-color: #186b3b;
+    color: #fff;
+}
+
+.main-navigation .current-menu-item > a, 
+.main-navigation .current-menu-ancestor > a {
+    color: #fff;
+}
+
+.main-navigation .dropdown-toggle:after {
+    color: #8ce5b2; 
+}
+
+/* Posts navigation */
+.post-navigation .nav-links a,
+.post-navigation .nav-links a span,
+.navigation .nav-links,
+.navigation .nav-links a,
+.navigation .nav-links a span {
+    font-family: Lato, sans-serif;
+}
+
+.navigation .nav-links .next,
+.navigation .nav-links .prev {
+    background-color: #8fc339;
+    transition: background-color .5s linear;
+}
+
+.navigation .nav-links .next:hover,
+.navigation .nav-links .next:focus,
+.navigation .nav-links .prev:hover,
+.navigation .nav-links .prev:focus {
+    background-color: #186b3b;
+}
+
+/* Paginated post links */
+.page-links a {
+    background-color: #8fc339;
+    border-color: #8fc339;
+    color: #fff;
+}
+
+.page-links a:hover,
+.page-links a:focus {
+    background-color: #186b3b;
+    border-color: #186b3b;
+}
+
